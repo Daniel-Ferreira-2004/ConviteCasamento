@@ -1,73 +1,111 @@
-        body {
-            background-color: white;
-            font-family: Arial, sans-serif;
-        }
+@font-face {
+    font-family: 'Exmouth';
+    src: url('../fonts/Exmouth-Regular.woff2') format('woff2'),
+         url('../fonts/Exmouth-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 
-        h1, h2, h3, h4, h5 {
-            color: #17396A;
-            margin-bottom: 1em;
-        }
+body {
+    background-color: white; /* tom chique */
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+}
 
-        p {
-            color: #333;
-            font-size: 1.1em;
-            font-weight: 500;
-        }
+/* Flor no canto superior esquerdo */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;   /* ajuste conforme o tamanho da flor */
+    height: 180px;
+    background: url('../HTML/Flor.png') no-repeat;
+    background-size: contain;
+    pointer-events: none; 
+    z-index: 1;
+}
 
-        .cabecalho {
-            margin-top: 15vh;
-        }
+h1, h2, h3, h4, h5 {
+    color: #2B3A67;
+    margin-bottom: 1em;
+    font-family: 'Exmouth', serif; /* fallback serif se a fonte não carregar */
 
-        /* Convite */
-        .convite {
-            max-width: 400px;
-            margin: 30px auto;
-            text-align: center;
-            padding: 5em;
-            border-radius: 2em;
-            background: white;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+}
 
-        .time-box {
-            background: #17396A;
-            border-radius: 100%;
-            width: 80px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-            box-shadow: 0 4px 5px rgba(0,0,0,0.1);
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
+p {
+    color: #555555;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
 
-        .time-box:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 10px rgba(0,0,0,0.2);
-        }
+/* ===== Cabeçalho ===== */
+.cabecalho {
+    margin-top: 15vh;
+    text-align: center;
+    animation: fadeInDown 1s ease forwards;
+}
 
-        .time-label {
-            font-size: 1rem;
-            margin-top: 10px;
-            color: #17396A;
-            font-weight: 600;
-        }
+/* ===== Logo ===== */
+.nomes img {
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+    animation: float 3s ease-in-out infinite;
+}
+/* ===== Boxes de informações - tons de azul ===== */
+/* ===== Boxes de informações - tons de azul ===== */
+.info-box {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 2rem;
+    color: #2B3A67; /* ícone azul escuro */
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: #B3CDE0; /* azul suave elegante */
+}
+.info-box:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    background: #89A4C3; /* azul mais escuro no hover */
+}
 
-        /* Contagem regressiva */
-        .countdown {
-            font-weight: bold;
-            text-align: center;
-        }
+/* ===== Labels ===== */
+.info-label {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #2B3A67; /* azul petróleo escuro */
+    font-size: 1rem;
+}
 
-        .time-number {
-            color: white;
-            font-size: 1.2rem;
-        }
 
-        /* Modal ajustes */
-        .modal-body img {
-            max-width: 100%;
-        }
+/* ===== Modal ajustes ===== */
+.modal-body img {
+    max-width: 100%;
+    display: block;
+    margin: 10px auto;
+}
+
+/* ===== Animações ===== */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

@@ -1,97 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel e Tainara</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel e Tainara</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-<main>
+<main class="container">
     <!-- Cabeçalho -->
-    <section class="d-flex align-items-center justify-content-center">
-        <div class="container text-center cabecalho">
-            <h2>Com muita alegria</h2>
-            <h2>Convidamos para o nosso casamento</h2>
-            <p class="mt-5 mb-5">Assim já não são mais dois, mas um só carne. Portanto o que Deus ajuntou, não o separe o homem.</p>
-        </div>
+    <section class="cabecalho text-center">
+        <h2>Com muita alegria</h2>
+        <h2>Convidamos para o nosso casamento</h2>
+        <p>Assim já não são mais dois, mas um só carne. Portanto o que Deus ajuntou, não o separe o homem.</p>
     </section>
 
     <!-- Logo -->
-    <section class="nomes">
-        <div class="container d-flex justify-content-center">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <img src="Grey Brown Circle Floral Initial Wedding Logo.png" alt="Logo Casamento" class="img-fluid">
-                </div>
-            </div>
-        </div>
+    <section class="nomes text-center my-4">
+        <img src="Grey Brown Circle Floral Initial Wedding Logo.png" alt="Logo Casamento">
     </section>
 
-    <!-- Informações do Casamento no estilo contagem regressiva -->
-    <div class="container text-center my-5">
+    <!-- Informações -->
+    <div class="container text-center">
         <h1>Informações do Casamento</h1>
-        <div class="row justify-content-center mt-4">
-            <!-- Sugestão de Presente -->
-            <div class="col-6 col-sm-4 col-md-3 mb-4">
-                <div class="time-box" data-section="presente">🎁</div>
-                <div class="time-label">Sugestão de Presente</div>
+        <div class="row row-info justify-content-center">
+            <div class="col-6 col-sm-4 col-md-3 mb-4 text-center">
+                <div class="info-box presente" data-section="presente">🎁</div>
+                <div class="info-label">Sugestão de Presente</div>
             </div>
-
-            <!-- Endereço -->
-            <div class="col-6 col-sm-4 col-md-3 mb-4">
-                <div class="time-box" data-section="endereco">📍</div>
-                <div class="time-label">Endereço</div>
+            <div class="col-6 col-sm-4 col-md-3 mb-4 text-center">
+                <div class="info-box endereco" data-section="endereco">📍</div>
+                <div class="info-label">Endereço</div>
             </div>
-
-            <!-- OBS -->
-            <div class="col-6 col-sm-4 col-md-3 mb-4">
-                <div class="time-box" data-section="observacoes">ℹ️</div>
-                <div class="time-label">OBS</div>
+            <div class="col-6 col-sm-4 col-md-3 mb-4 text-center">
+                <div class="info-box observacoes" data-section="observacoes">ℹ️</div>
+                <div class="info-label">OBS</div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 mb-4 text-center">
+                <!-- Botão para abrir modal RSVP -->
+                <div class="info-box rsvp" id="openRsvpModal">✅</div>
+                <div class="info-label">Confirmação de presença</div>
             </div>
         </div>
     </div>
 
     <!-- Contagem regressiva -->
-    <section class="d-flex align-items-center justify-content-center mb-5 mt-5">
-        <div class="container text-center">
-            <h3 class="mb-4 mt-5">Contagem Regressiva</h3>
-            <div id="countdown" class="row justify-content-center countdown mb-5 mt-5">
-                <div class="col-3 col-sm-2 text-center">
-                    <div class="time-box">
-                        <div id="days" class="time-number">00</div>
-                    </div>
-                    <div class="time-label">Dias</div>
+    <section class="text-center my-5">
+        <h3>Contagem Regressiva</h3>
+        <div id="countdown" class="row justify-content-center mt-4">
+            <div class="col-3 col-sm-2 text-center">
+                <div class="info-box countdown-box">
+                    <div id="days">00</div>
                 </div>
-
-                <div class="col-3 col-sm-2 text-center">
-                    <div class="time-box">
-                        <div id="hours" class="time-number">00</div>
-                    </div>
-                    <div class="time-label">Horas</div>
+                <div class="info-label">Dias</div>
+            </div>
+            <div class="col-3 col-sm-2 text-center">
+                <div class="info-box countdown-box">
+                    <div id="hours">00</div>
                 </div>
-
-                <div class="col-3 col-sm-2 text-center">
-                    <div class="time-box">
-                        <div id="minutes" class="time-number">00</div>
-                    </div>
-                    <div class="time-label">Minutos</div>
+                <div class="info-label">Horas</div>
+            </div>
+            <div class="col-3 col-sm-2 text-center">
+                <div class="info-box countdown-box">
+                    <div id="minutes">00</div>
                 </div>
-
-                <div class="col-3 col-sm-2 text-center">
-                    <div class="time-box">
-                        <div id="seconds" class="time-number">00</div>
-                    </div>
-                    <div class="time-label">Segundos</div>
+                <div class="info-label">Minutos</div>
+            </div>
+            <div class="col-3 col-sm-2 text-center">
+                <div class="info-box countdown-box">
+                    <div id="seconds">00</div>
                 </div>
+                <div class="info-label">Segundos</div>
             </div>
         </div>
     </section>
-
 </main>
 
-<!-- Modal -->
+<!-- Modal para presente, endereço e observações -->
 <div class="modal fade" id="sectionModal" tabindex="-1" aria-labelledby="sectionModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -104,60 +93,86 @@
     </div>
 </div>
 
+<!-- Modal RSVP -->
+<div class="modal fade" id="rsvpModal" tabindex="-1" aria-labelledby="rsvpModalLabel" aria-hidden="true">
+    <div class="modal-dialog text-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirmação de Presença</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <p>Você vai participar do casamento?</p>
+                <button class="btn btn-success my-2 w-100" id="vouParticipar">Vou participar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // Conteúdos dos modais
+    // Conteúdo das outras seções
     const sections = {
         presente: `
-            <p>Não queremos que levem presentes, porém se quiserem nos ajudar com a lua de Mel, faça um pix :</p>
+            <p>Não queremos que levem presentes, porém se quiserem nos ajudar com a lua de Mel, faça um pix:</p>
             <img src="qrcode-pix (1).png" alt="QR Code" class="img-fluid my-3">
-            <p>Chave pix: +55 11 98102-5872</p>
-            <p>Banco NU</p>
+            <p><strong>Chave pix:</strong> +55 11 98102-5872</p>
+            <p><strong>Banco:</strong> NU</p>
         `,
-        endereco: `
-            <p>Estr. dos Fernandes, 2100 - Parque Santa Rosa, Suzano - SP, 08664-005</p>
-        `,
+        endereco: `<p>Estr. dos Fernandes, 2100 - Parque Santa Rosa, Suzano - SP, 08664-005</p>`,
         observacoes: `
-            <p>Não levar presentes</p>
-            <p>Não usar branco</p>
-            <p>Crianças não podem correr no estacionamento</p>
-            <p>Levar as suas bebidas alcoólicas</p>
+            <p>❌ Não levar presentes</p>
+            <p>⚪ Não usar branco</p>
+            <p>🚸 Crianças não podem correr no estacionamento</p>
+            <p>🍷 Levar as suas bebidas alcoólicas</p>
         `
     };
 
-    // Modal ao clicar nas caixas
-    document.querySelectorAll('.time-box[data-section]').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const key = btn.getAttribute('data-section');
-            document.getElementById('sectionModalLabel').innerText = btn.nextElementSibling.innerText;
-            document.getElementById('sectionModalBody').innerHTML = sections[key];
-            const modal = new bootstrap.Modal(document.getElementById('sectionModal'));
-            modal.show();
+    const modalEl = document.getElementById('sectionModal');
+    const bootstrapModal = new bootstrap.Modal(modalEl);
+
+    document.querySelectorAll('.info-box[data-section]').forEach(box => {
+        box.addEventListener('click', () => {
+            const key = box.getAttribute('data-section').trim();
+            document.getElementById('sectionModalLabel').innerText = box.nextElementSibling.innerText;
+            document.getElementById('sectionModalBody').innerHTML = sections[key] || "<p>Em breve...</p>";
+            bootstrapModal.show();
         });
     });
 
+    // Modal RSVP
+    const rsvpModalEl = document.getElementById('rsvpModal');
+    const rsvpModal = new bootstrap.Modal(rsvpModalEl);
+
+    document.getElementById('openRsvpModal').addEventListener('click', () => {
+        rsvpModal.show();
+    });
+
+    // Abrir WhatsApp ao clicar nas opções
+    document.getElementById('vouParticipar').addEventListener('click', () => {
+        window.open("https://wa.link/tl1qrn", "_blank");
+        rsvpModal.hide();
+    });
+
     // Contagem regressiva
-    function pad(num){ return num < 10 ? "0"+num : num; }
-    const countDownDate = new Date("Nov 22, 2025 11:00:00").getTime();
-    const x = setInterval(function(){
+    function pad(num){ return num<10?"0"+num:num; }
+    const countDownDate = new Date("2025-11-22T11:00:00-03:00").getTime();
+    setInterval(() => {
         const now = new Date().getTime();
         const distance = countDownDate - now;
-
-        const days = Math.floor(distance / (1000*60*60*24));
-        const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-        const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
-        const seconds = Math.floor((distance % (1000*60)) / 1000);
-
-        document.getElementById("days").innerHTML = pad(days);
-        document.getElementById("hours").innerHTML = pad(hours);
-        document.getElementById("minutes").innerHTML = pad(minutes);
-        document.getElementById("seconds").innerHTML = pad(seconds);
-
         if(distance < 0){
-            clearInterval(x);
             document.getElementById("countdown").innerHTML = "<h2>Tempo Esgotado!</h2>";
+            return;
         }
-    }, 1000);
+        const days = Math.floor(distance/(1000*60*60*24));
+        const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+        const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+        const seconds = Math.floor((distance%(1000*60))/1000);
+        document.getElementById("days").innerText = pad(days);
+        document.getElementById("hours").innerText = pad(hours);
+        document.getElementById("minutes").innerText = pad(minutes);
+        document.getElementById("seconds").innerText = pad(seconds);
+    },1000);
 </script>
 </body>
 </html>
