@@ -1,0 +1,73 @@
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2, h3, h4, h5 {
+            color: #17396A;
+            margin-bottom: 1em;
+        }
+
+        p {
+            color: #333;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .cabecalho {
+            margin-top: 15vh;
+        }
+
+        /* Convite */
+        .convite {
+            max-width: 400px;
+            margin: 30px auto;
+            text-align: center;
+            padding: 5em;
+            border-radius: 2em;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .time-box {
+            background: #17396A;
+            border-radius: 100%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .time-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+        }
+
+        .time-label {
+            font-size: 1rem;
+            margin-top: 10px;
+            color: #17396A;
+            font-weight: 600;
+        }
+
+        /* Contagem regressiva */
+        .countdown {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .time-number {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        /* Modal ajustes */
+        .modal-body img {
+            max-width: 100%;
+        }
