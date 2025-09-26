@@ -1,11 +1,6 @@
-@font-face {
-    font-family: "Fonte-Titulo";
-    src: url(../fontes/angelina.ttf) format("truetype");
-    font-weight: 600;
-    font-style: normal;
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 body {
     background-color: white;
@@ -25,9 +20,10 @@ h4,
 h5 {
     color: black;
     margin-bottom: 1em;
-    font-family: "Fonte-Titulo";
+  font-family: "Dancing Script", cursive;
     font-size: 2.5em;
-    font-weight: bold;
+    font-weight: 600;
+      font-style: normal;
 
 }
 
@@ -112,6 +108,7 @@ p {
     justify-content: center;
     align-items: center;
 }
+
 /* ===== Animações ===== */
 @keyframes float {
 
