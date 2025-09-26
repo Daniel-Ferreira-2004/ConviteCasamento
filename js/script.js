@@ -1,18 +1,22 @@
     // Conteúdo das outras seções
     const sections = {
         presente: `
-            <p>Não queremos que levem presentes, porém se quiserem nos ajudar com a lua de Mel, faça um pix:</p>
-            <img src="../img/qrcode-pix (1).png" alt="QR Code" class="img-fluid my-3">
+            <h2>Querido Convidado</h2>
+            <div class="divPix">
+            <p>Caso queira nos agraciar com um presente, gostariamos que este fosse convertido em dinheiro</p>
+            <img class="pix" src="../img/qrcode-pix (1).png" alt="QR Code" class="img-fluid my-3">
+            </div>
             <p><strong>Chave pix:</strong> (11) 98102-5872</p>
             <p><strong>Banco:</strong> Nubank</p>
         `,
         endereco: `<p>Estr. dos Fernandes, 2100 - Parque Santa Rosa, Suzano - SP, 08664-005</p>
+                    <p> Horario: 12:00</p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.283050856709!2d-46.334931124670014!3d-23.558275578801883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce70787b0d830d%3A0xd778c499e8b5d56e!2sEstr.%20dos%20Fernandes%2C%202100%20-%20Parque%20Santa%20Rosa%2C%20Suzano%20-%20SP%2C%2008664-005!5e0!3m2!1spt-PT!2sbr!4v1758908072261!5m2!1spt-PT!2sbr" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`,
         observacoes: `
-            <p>❌ Não levar presentes</p>
+            <p>🎁 Caso queira nos agraciar com um presente, gostariamos que este fosse convertido em dinheiro</p>
             <p>⚪ Não usar branco</p>
             <p>🚸 Crianças não podem correr no estacionamento</p>
-            <p>🍷 Se for beber, levar as suas bebidas alcoólicas</p>
+            <p>😇 Convidado não convida</p>
         `
     };
 

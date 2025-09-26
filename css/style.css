@@ -103,6 +103,15 @@ p {
     margin-bottom: 50vh;
 }
 
+.pix {
+    width: 15em;
+}
+
+.divPix {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* ===== Animações ===== */
 @keyframes float {
 
