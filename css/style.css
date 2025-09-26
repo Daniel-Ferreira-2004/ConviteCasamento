@@ -1,59 +1,60 @@
 @font-face {
-    font-family: 'Exmouth';
-    src: url('../fonts/Exmouth-Regular.woff2') format('woff2'),
-         url('../fonts/Exmouth-Regular.ttf') format('truetype');
-    font-weight: 400;
+    font-family: "Fonte-Titulo";
+    src: url(../fontes/angelina.TTF) format("truetype");
+    font-weight: 600;
     font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 body {
-    background-color: white; /* tom chique */
+    background-color: white;
+    /* tom chique */
     font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
+    background-image: url(../img/Convite\ para\ casamento\ aquarelado\ e\ elegante\ azul\ \(1\).png);
+    background-size: cover;
+    background-position: center;
 }
 
-/* Flor no canto superior esquerdo */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 180px;   /* ajuste conforme o tamanho da flor */
-    height: 180px;
-    background: url('../HTML/Flor.png') no-repeat;
-    background-size: contain;
-    pointer-events: none; 
-    z-index: 1;
-}
-
-h1, h2, h3, h4, h5 {
-    color: #2B3A67;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: black;
     margin-bottom: 1em;
-    font-family: 'Exmouth', serif; /* fallback serif se a fonte não carregar */
+    font-family: "Fonte-Titulo";
+    font-size: 2.5em;
+    font-weight: bold;
 
 }
 
 p {
-    color: #555555;
-    font-size: 1.1em;
+    color: black;
+    font-size: 1.3em;
     line-height: 1.6;
+    font-family: "Playfair Display", serif;
+    /* fallback serif se a fonte não carregar */
+
 }
 
 /* ===== Cabeçalho ===== */
 .cabecalho {
-    margin-top: 15vh;
+    margin-top: 50vh;
     text-align: center;
     animation: fadeInDown 1s ease forwards;
 }
 
 /* ===== Logo ===== */
 .nomes img {
-    max-width: 200px;
+    max-width: 300px;
     margin: 0 auto;
     display: block;
     animation: float 3s ease-in-out infinite;
 }
+
 /* ===== Boxes de informações - tons de azul ===== */
 /* ===== Boxes de informações - tons de azul ===== */
 .info-box {
@@ -64,24 +65,29 @@ p {
     align-items: center;
     justify-content: center;
     margin: auto;
-    font-size: 2rem;
-    color: #2B3A67; /* ícone azul escuro */
+    font-size: 1.5rem;
+    color: #2B3A67;
+    /* ícone azul escuro */
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    background: #B3CDE0; /* azul suave elegante */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: #B3CDE0;
+    /* azul suave elegante */
 }
+
 .info-box:hover {
     transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    background: #89A4C3; /* azul mais escuro no hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    background: #89A4C3;
+    /* azul mais escuro no hover */
 }
 
 /* ===== Labels ===== */
 .info-label {
     margin-top: 10px;
     font-weight: 600;
-    color: #2B3A67; /* azul petróleo escuro */
+    color: #2B3A67;
+    /* azul petróleo escuro */
     font-size: 1rem;
 }
 
@@ -93,19 +99,45 @@ p {
     margin: 10px auto;
 }
 
+.contangem {
+    margin-bottom: 50vh;
+}
+
 /* ===== Animações ===== */
 @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes fadeInDown {
-    0% { opacity: 0; transform: translateY(-30px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
