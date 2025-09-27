@@ -62,7 +62,7 @@ p {
     justify-content: center;
     margin: auto;
     font-size: 1.5rem;
-    color: #2B3A67;
+    color: black;
     /* ícone azul escuro */
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
@@ -100,7 +100,7 @@ p {
 }
 
 .pix {
-    width: 15em;
+    width: 10em;
 }
 
 .divPix {

@@ -17,6 +17,7 @@
             <p>⚪ Não usar branco</p>
             <p>🚸 Crianças não podem correr no estacionamento</p>
             <p>😇 Convidado não convida</p>
+            <p>🚷 Proibido transitar pelo condominio</p>
         `
     };
 
@@ -42,7 +43,7 @@
 
     // Abrir WhatsApp ao clicar nas opções
     document.getElementById('vouParticipar').addEventListener('click', () => {
-        window.open("https://wa.link/tl1qrn", "_blank");
+        window.open("https://wa.link/ic8z90", "_blank");
         rsvpModal.hide();
     });
 
